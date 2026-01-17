@@ -1,5 +1,5 @@
 
-from sqlalchemy import create_engine
+rom sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from app.config.settings import DATABASE_URL
@@ -14,4 +14,5 @@ def get_db():
     try:
         yield db
     finally:
+
         db.close()
